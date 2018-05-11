@@ -1,0 +1,14 @@
+<button mat-raised-button type="button" class="chat-toggle" (click)='chatToggle()'>
+  <span>{{ chatText }}</span>
+  <ng-template *ngIf='chatStatus === false; else chatHide'>
+    <i class="material-icons">
+      keyboard_arrow_left
+    </i>
+  </ng-template>
+
+  <ng-template #chatHide>
+    <i class="material-icons">
+      keyboard_arrow_right
+    </i>
+  </ng-template>
+</button>

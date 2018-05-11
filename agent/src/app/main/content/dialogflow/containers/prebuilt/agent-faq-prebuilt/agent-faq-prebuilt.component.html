@@ -1,0 +1,12 @@
+<div *ngIf='chatStatus'>
+    <div [@chatStatusIn]="chatStatus" class="chat-container">
+        <iframe width="350" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/dd94b41d-307d-4bfb-963d-4dd06c7b6a03">
+        </iframe>
+    </div>
+</div>
+
+<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+    <div class="item item-1" fxFlex="20%" aria-label="Item 1">Item 1</div>
+    <div class="item item-2" fxFlex="20%" fxFlexOrder="3">Item 2</div>
+    <div class="item item-3" fxFlex>Item 3</div>
+</div>

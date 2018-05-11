@@ -4,5 +4,11 @@
 body, html {
     margin: 0;
     height: 100%;
-    font-family: roboto, 'Courier New', Courier, monospace;
+    font-family: roboto, 'Courier New', Courier, monospace;  
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container > .item {
+    padding: 10px;
 }

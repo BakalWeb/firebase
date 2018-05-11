@@ -1,14 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
-import { AppComponent } from './app.component';
-import { HomeModule } from './main/content/home/home.module';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './main/content/home/containers/home/home.component';
 
+// Components
+import { HomeComponent } from '@content/home/containers/home/home.component';
+import { AppComponent } from './app.component';
 
-const appRoutes: Routes = [
+// Modules
+import { HomeModule } from '@content/home/home.module';
+import { DialogFlowModule } from '@content/dialogflow/dialogflow.module';
+import { LayoutModule } from '@app/main/layout/layout.module';
+import { GridModule } from '@app/core/modules/grid.module';
+
+export const appRoutes: Routes = [
   {
     path: '',
     pathMatch: 'full',
@@ -18,6 +22,10 @@ const appRoutes: Routes = [
     path: 'home',
     component: HomeComponent
     },
+    {
+      path: 'agents/prebuilt/faq',
+      loadChildren: 'app/main/content/dialogflow/dialogflow.module#DialogFlowModule'
+    }
 ];
 
 @NgModule({
@@ -26,10 +34,14 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    HomeModule,
     RouterModule.forRoot(appRoutes, {}),
+    HomeModule,
+    DialogFlowModule,
+    LayoutModule,
+    GridModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

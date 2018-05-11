@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './containers/home/home.component';
 import { MaterialModule } from '../../../core/modules/material.module';
+import { LayoutModule } from '../../layout/layout.module';
 
 const routes: Routes = [
   {
@@ -16,11 +17,13 @@ const routes: Routes = [
     CommonModule,
     MaterialModule,
     RouterModule.forChild(routes),
+    LayoutModule,
   ],
   exports: [
     HomeComponent,
   ],
-  providers: [],
+  providers: [
+  ],
   declarations: [
     HomeComponent
   ]

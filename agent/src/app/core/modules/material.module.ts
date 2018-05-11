@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   import {
       MatAutocompleteModule,
       MatButtonModule,
@@ -69,7 +70,8 @@ import { NgModule } from '@angular/core';
         MatTabsModule,
         MatToolbarModule,
         MatTooltipModule,
-        CdkTableModule
+        CdkTableModule,
+        BrowserAnimationsModule
     ],
     exports: [
         MatAutocompleteModule,
@@ -103,7 +105,8 @@ import { NgModule } from '@angular/core';
         MatTabsModule,
         MatToolbarModule,
         MatTooltipModule,
-        CdkTableModule
+        CdkTableModule,
+        BrowserAnimationsModule
     ]
 })
 export class MaterialModule { }
